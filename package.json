@@ -33,7 +33,9 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "zendesk",
+    "support"
   ],
   "repository": "https://github.com/dentemm/react-native-zendesk-support",
   "author": "Tim Claes <tim.claes@paired.com> (https://github.com/dentemm)",
