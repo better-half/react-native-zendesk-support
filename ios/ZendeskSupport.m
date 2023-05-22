@@ -6,7 +6,6 @@
 //  Copyright © 2023 Tim Claes. All rights reserved.
 //
 
-#import "RNZendeskBridge.h"
 #import <React/RCTBridgeModule.h>
 
 @interface RCT_EXTERN_REMAP_MODULE(RNZendeskSupport, RNZendeskSupport, NSObject)
