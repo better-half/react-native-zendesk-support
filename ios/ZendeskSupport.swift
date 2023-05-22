@@ -12,8 +12,8 @@ import SupportSDK
 import ZendeskCoreSDK
 import CommonUISDK
 
-@objc(ZendeskSupport)
-class ZendeskSupport: RCTEventEmitter {
+@objc(RNZendeskSupport)
+class RNZendeskSupport: RCTEventEmitter {
 
     override public static func requiresMainQueueSetup() -> Bool {
         return false;

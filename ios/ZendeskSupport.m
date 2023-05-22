@@ -9,7 +9,7 @@
 #import "RNZendeskBridge.h"
 #import <React/RCTBridgeModule.h>
 
-@interface RCT_EXTERN_REMAP_MODULE(ZendeskSupport, ZendeskSupport, NSObject)
+@interface RCT_EXTERN_REMAP_MODULE(RNZendeskSupport, RNZendeskSupport, NSObject)
 
 // MARK: - Initialization
 
