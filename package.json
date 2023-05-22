@@ -37,13 +37,13 @@
     "zendesk",
     "support"
   ],
-  "repository": "https://github.com/dentemm/react-native-zendesk-support",
+  "repository": "https://github.com/better-half/react-native-zendesk-support",
   "author": "Tim Claes <tim.claes@paired.com> (https://github.com/dentemm)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dentemm/react-native-zendesk-support/issues"
+    "url": "https://github.com/better-half/react-native-zendesk-support/issues"
   },
-  "homepage": "https://github.com/dentemm/react-native-zendesk-support#readme",
+  "homepage": "https://github.com/better-half/react-native-zendesk-support#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
