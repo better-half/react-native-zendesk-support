@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* ZendeskSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* ZendeskSupport.m */; };
-		F4FF95D7245B92E800C19C63 /*  ZendeskSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  ZendeskSupport.swift */; };
+		02A4B0EC2A1B7D310004513D /* RNZendeskSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A4B0EB2A1B7D310004513D /* RNZendeskSupport.swift */; };
+		F4FF95D7245B92E800C19C63 /* ZendeskSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* ZendeskSupport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02A4B0EB2A1B7D310004513D /* RNZendeskSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNZendeskSupport.swift; sourceTree = "<group>"; };
 		134814201AA4EA6300B7C361 /* libZendeskSupport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZendeskSupport.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5891CC2AC0600A0062D /* ZendeskSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZendeskSupport.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* ZendeskSupport-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZendeskSupport-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				02A4B0EB2A1B7D310004513D /* RNZendeskSupport.swift */,
 				F4FF95D6245B92E800C19C63 /* ZendeskSupport.swift */,
 				B3E7B5891CC2AC0600A0062D /* ZendeskSupport.m */,
 				F4FF95D5245B92E700C19C63 /* ZendeskSupport-Bridging-Header.h */,
@@ -116,8 +118,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02A4B0EC2A1B7D310004513D /* RNZendeskSupport.swift in Sources */,
 				F4FF95D7245B92E800C19C63 /* ZendeskSupport.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* ZendeskSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

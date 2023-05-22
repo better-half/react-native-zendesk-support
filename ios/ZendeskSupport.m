@@ -1,14 +1,29 @@
+//
+//  RNZendeskBridge.m
+//  RNZendesk
+//
+//  Created by Tim Claes on 22.05.23.
+//  Copyright © 2023 Tim Claes. All rights reserved.
+//
+
+#import "RNZendeskBridge.h"
 #import <React/RCTBridgeModule.h>
 
-@interface RCT_EXTERN_MODULE(ZendeskSupport, NSObject)
+@interface RCT_EXTERN_REMAP_MODULE(ZendeskSupport, ZendeskSupport, NSObject)
 
-RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
+// MARK: - Initialization
 
-+ (BOOL)requiresMainQueueSetup
-{
-  return NO;
-}
+RCT_EXTERN_METHOD(initialize:(NSDictionary *)config);
+
+// MARK: - Indentification
+
+RCT_EXTERN_METHOD(identifyJWT:(NSString *)token);
+RCT_EXTERN_METHOD(identifyAnonymous:(NSString *)name email:(NSString *)email);
+
+// MARK: - UI Methods
+
+RCT_EXTERN_METHOD(showHelpCenter:(NSDictionary *)options);
+RCT_EXTERN_METHOD(showNewTicket:(NSDictionary *)options);
+RCT_EXTERN_METHOD(showTicketList);
 
 @end
