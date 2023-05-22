@@ -24,9 +24,9 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class RNZendeskBridge extends ReactContextBaseJavaModule {
+public class ZendeskSupportModule extends ReactContextBaseJavaModule {
 
-    public RNZendeskBridge(ReactApplicationContext reactContext) {
+    public ZendeskSupportModule(ReactApplicationContext reactContext) {
         super(reactContext);
     }
 

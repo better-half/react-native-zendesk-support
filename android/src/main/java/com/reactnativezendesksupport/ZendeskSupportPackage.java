@@ -11,14 +11,14 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class RNZendeskPackage implements ReactPackage {
+public class ZendeskSupportPackage implements ReactPackage {
 
     @Override
     public List<NativeModule> createNativeModules(
         ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
 
-        modules.add(new RNZendeskBridge(reactContext));
+        modules.add(new ZendeskSupportModule(reactContext));
         return modules;
     }
 
