@@ -1,20 +1,87 @@
-import { NativeModules, Platform } from 'react-native';
+import { NativeModules } from 'react-native'
 
-const LINKING_ERROR =
-  `The package 'react-native-zendesk-support' doesn't seem to be linked. Make sure: \n\n` +
-  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
-  '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo managed workflow\n';
+const { RNZendeskSupport } = NativeModules
 
-const ZendeskSupport = NativeModules.ZendeskSupport  ? NativeModules.ZendeskSupport  : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
+interface Config {
+  appId: string
+  clientId: string
+  zendeskUrl: string
+}
 
-export function multiply(a: number, b: number): Promise<number> {
-  return ZendeskSupport.multiply(a, b);
+// MARK: - Initialization
+
+export function initialize(config: Config) {
+  RNZendeskSupport.initialize(config)
+}
+
+// MARK: - Indentification
+
+export function identifyJWT(token: string) {
+  RNZendeskSupport.identifyJWT(token)
+}
+
+export function identifyAnonymous(name?: string, email?: string) {
+  RNZendeskSupport.identifyAnonymous(name, email)
+}
+
+// MARK: - UI Methods
+
+interface HelpCenterOptions {
+  hideContactSupport?: boolean
+}
+
+export function showHelpCenter(options: HelpCenterOptions) {
+  RNZendeskSupport.showHelpCenter(options)
+}
+
+interface NewTicketOptions {
+  tags?: string[]
+}
+
+export function showNewTicket(options: NewTicketOptions) {
+  RNZendeskSupport.showNewTicket(options)
+}
+
+export function showTicketList() {
+  RNZendeskSupport.showTicketList()
+}
+
+enum SupportedLocales {
+  ar,
+  bg,
+  cs,
+  da,
+  de,
+  el,
+  'en-GB',
+  en,
+  es,
+  fi,
+  fil,
+  fr,
+  he,
+  hi,
+  hu,
+  id,
+  it,
+  ja,
+  ko,
+  ms,
+  nb,
+  nl,
+  pl,
+  'pt-BR',
+  pt,
+  ro,
+  ru,
+  sv,
+  th,
+  tr,
+  vi,
+  'zh-Hans',
+  'zh-Hant',
+}
+
+export function setHelpCenterLocaleOverride(locale: SupportedLocales) {
+  RNZendeskSupport.setHelpCenterLocaleOverride(locale)
 }

@@ -1,6 +1,6 @@
 //
-//  RNZendesk.swift
-//  RNZendesk
+//  RNZendeskSupport.swift
+//  RNZendeskSupport
 //
 //  Created by Tim Claes on 22.05.23.
 //  Copyright © 2023 Tim Claes. All rights reserved.
@@ -100,5 +100,10 @@ class RNZendeskSupport: RCTEventEmitter {
             let nvc = UINavigationController(rootViewController: requestListController)
             UIApplication.shared.keyWindow?.rootViewController?.present(nvc, animated: true)
         }
+    }
+
+    @objc(setHelpCenterLocaleOverride:)
+    func setHelpCenterLocaleOverride(locale: String) {
+        Support.instance?.helpCenterLocaleOverride = locale
     }
 }
