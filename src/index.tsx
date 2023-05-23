@@ -34,6 +34,10 @@ export function showHelpCenter(options: HelpCenterOptions) {
   RNZendeskSupport.showHelpCenter(options)
 }
 
+export function getTicketUpdateCount(): Promise<number> {
+  return RNZendeskSupport.getTicketUpdateCount()
+}
+
 interface NewTicketOptions {
   tags?: string[]
 }
