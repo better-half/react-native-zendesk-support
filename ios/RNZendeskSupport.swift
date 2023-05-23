@@ -107,11 +107,6 @@ class RNZendeskSupport: RCTEventEmitter {
         Support.instance?.helpCenterLocaleOverride = locale
     }
     
-    @objc(setHelpCenterLocaleOverride:)
-    func setHelpCenterLocaleOverride(locale: String) {
-        Support.instance?.helpCenterLocaleOverride = locale
-    }
-    
     @objc(getTicketUpdateCount:rejecter:)
     func getTicketUpdateCount(resolver:RCTPromiseResolveBlock, rejecter:RCTPromiseRejectBlock) {
 
