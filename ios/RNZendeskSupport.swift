@@ -108,7 +108,7 @@ class RNZendeskSupport: RCTEventEmitter {
     }
     
     @objc(getTicketUpdateCount:rejecter:)
-    func getTicketUpdateCount(resolver:RCTPromiseResolveBlock, rejecter:RCTPromiseRejectBlock) {
+    func getTicketUpdateCount(resolver: @escaping RCTPromiseResolveBlock, rejecter: @escaping RCTPromiseRejectBlock) {
 
         let provider = ZDKRequestProvider()
             
