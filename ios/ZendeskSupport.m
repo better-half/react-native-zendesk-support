@@ -25,5 +25,6 @@ RCT_EXTERN_METHOD(showHelpCenter:(NSDictionary *)options);
 RCT_EXTERN_METHOD(showNewTicket:(NSDictionary *)options);
 RCT_EXTERN_METHOD(showTicketList);
 RCT_EXTERN_METHOD(setHelpCenterLocaleOverride:(NSString *)locale);
+RCT_EXTERN_METHOD(getTicketUpdateCount:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject);
 
 @end

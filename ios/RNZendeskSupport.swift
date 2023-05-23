@@ -106,4 +106,21 @@ class RNZendeskSupport: RCTEventEmitter {
     func setHelpCenterLocaleOverride(locale: String) {
         Support.instance?.helpCenterLocaleOverride = locale
     }
+    
+    @objc(setHelpCenterLocaleOverride:)
+    func setHelpCenterLocaleOverride(locale: String) {
+        Support.instance?.helpCenterLocaleOverride = locale
+    }
+    
+    @objc(getTicketUpdateCount:rejecter:)
+    func getTicketUpdateCount(resolver:RCTPromiseResolveBlock, rejecter:RCTPromiseRejectBlock) {
+
+        let provider = ZDKRequestProvider()
+            
+        provider.getUpdatesForDevice(callback: { (requestUpdates) in
+            let count = requestUpdates?.totalUpdates ?? 0
+            
+            resolver(count)
+        })
+    }
 }
