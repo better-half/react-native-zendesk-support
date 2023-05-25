@@ -41,9 +41,6 @@ class RNZendeskSupport: RCTEventEmitter {
         
         Zendesk.initialize(appId: appId, clientId: clientId, zendeskUrl: zendeskUrl)
         Support.initialize(withZendesk: Zendesk.instance)
-
-        // Modify the CommonTheme object
-        CommonTheme.currentTheme.primaryColor = UIColor.orange
     }
     
     // MARK: - Indentification
