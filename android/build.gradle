@@ -125,7 +125,7 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
-  implementation group: 'com.zendesk', name: 'support', version: '5.1.2' {
+  implementation('com.zendesk:support:5.1.2') {
     exclude group: 'com.google.android', module: 'flexbox'
   }
 // From node_modules
