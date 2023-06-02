@@ -5,7 +5,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:3.5.3'
+    classpath 'com.android.tools.build:gradle:7.4.1'
   }
 }
 
@@ -123,12 +123,8 @@ repositories {
 
 
 dependencies {
-    //noinspection GradleDynamicVersion
+  implementation group: 'com.zendesk', name: 'support', version: '5.1.2'
   implementation "com.facebook.react:react-native:+"
-  implementation group: 'com.zendesk', name: 'support', version: '5.1.2' {
-    exclude group: 'com.google.android', module: 'flexbox'
-  }
-// From node_modules
 }
 
 if (isNewArchitectureEnabled()) {
