@@ -111,7 +111,7 @@ public class ZendeskSupportModule extends ReactContextBaseJavaModule {
                     promise.resolve(count);
 
                 } else {
-                    Promise.resolve(0);
+                    promise.resolve(0);
                 }
             }
 
