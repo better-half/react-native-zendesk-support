@@ -20,6 +20,7 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
+import com.facebook.react.bridge.Promise;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -89,6 +90,32 @@ public class ZendeskSupportModule extends ReactContextBaseJavaModule {
         } catch (Exception e) {
             Log.e("Zendesk", "error setting locale " + locale, e);
         }
+    }
+
+    @ReactMethod
+    public void getTicketUpdateCount(Promise promise) {
+
+        RequestProvider requestProvider = Support.INSTANCE.provider().requestProvider();
+
+        requestProvider.getUpdatesForDevice(new ZendeskCallback<RequestUpdates>() {
+
+            @Override
+            public void onSuccess(RequestUpdates requestUpdates) {
+
+                if (requestUpdates.hasUpdatedRequests()) {
+                    int count = requestUpdates.totalCount();
+                    promise.resolve(count);
+
+                } else {
+                    Promise.resolve(0);
+                }
+            }
+
+            @Override
+            public void onError(Error error) {
+                promise.reject(error);
+            }
+        });
     }
     
     @ReactMethod
