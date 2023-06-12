@@ -17,6 +17,7 @@ import zendesk.support.request.RequestActivity;
 import zendesk.support.requestlist.RequestListActivity;
 import zendesk.support.RequestUpdates;
 import zendesk.support.RequestProvider;
+import com.zendesk.service.ErrorResponse;
 import com.zendesk.service.ZendeskCallback;
 
 import com.facebook.react.bridge.ReactMethod;
@@ -102,7 +103,8 @@ public class ZendeskSupportModule extends ReactContextBaseJavaModule {
         RequestProvider requestProvider = Support.INSTANCE.provider().requestProvider();
 
         requestProvider.getUpdatesForDevice(new ZendeskCallback<RequestUpdates>() {
-
+            
+            @Override
             public void onSuccess(RequestUpdates requestUpdates) {
 
                 if (requestUpdates.hasUpdatedRequests()) {
@@ -115,7 +117,7 @@ public class ZendeskSupportModule extends ReactContextBaseJavaModule {
             }
 
             @Override
-            public void onError(Error error) {
+            public void onError(ErrorResponse error) {
                 promise.reject(error);
             }
         });
