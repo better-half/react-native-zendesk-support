@@ -15,6 +15,8 @@ import zendesk.support.Support;
 import zendesk.support.guide.HelpCenterActivity;
 import zendesk.support.request.RequestActivity;
 import zendesk.support.requestlist.RequestListActivity;
+import zendesk.support.RequestUpdates;
+import zendesk.support.RequestProvider;
 
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
