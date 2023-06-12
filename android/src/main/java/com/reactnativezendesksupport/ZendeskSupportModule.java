@@ -118,7 +118,7 @@ public class ZendeskSupportModule extends ReactContextBaseJavaModule {
 
             @Override
             public void onError(ErrorResponse error) {
-                promise.reject(error);
+                promise.reject("Error getting ticket update count");
             }
         });
     }
