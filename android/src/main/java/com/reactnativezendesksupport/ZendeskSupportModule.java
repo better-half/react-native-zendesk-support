@@ -102,6 +102,7 @@ public class ZendeskSupportModule extends ReactContextBaseJavaModule {
         RequestProvider requestProvider = Support.INSTANCE.provider().requestProvider();
 
         requestProvider.getUpdatesForDevice(new ZendeskCallback<RequestUpdates>() {
+
             public void onSuccess(RequestUpdates requestUpdates) {
 
                 if (requestUpdates.hasUpdatedRequests()) {
@@ -113,6 +114,7 @@ public class ZendeskSupportModule extends ReactContextBaseJavaModule {
                 }
             }
 
+            @Override
             public void onError(Error error) {
                 promise.reject(error);
             }
