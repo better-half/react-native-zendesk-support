@@ -105,7 +105,7 @@ public class ZendeskSupportModule extends ReactContextBaseJavaModule {
             public void onSuccess(RequestUpdates requestUpdates) {
 
                 if (requestUpdates.hasUpdatedRequests()) {
-                    int count = requestUpdates.totalCount();
+                    int count = requestUpdates.totalUpdates();
                     promise.resolve(count);
 
                 } else {
